@@ -6,8 +6,9 @@
 
         $client_socket->socket_connect($address, $port);
 
-        $message = readline("Digite uma menssagem: ");
+        $message = readline("Digite uma mensagem: ");
         $client_socket->socket_write($message, strlen($message));
+        socket_close($clientSocket);
     }
 
     $destination = 'localhost';
